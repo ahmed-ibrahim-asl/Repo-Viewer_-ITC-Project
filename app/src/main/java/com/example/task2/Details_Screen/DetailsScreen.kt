@@ -151,6 +151,16 @@ fun MainScreenView(modifier: Modifier = Modifier) {
                     text = "347",
                     fontSize = 20.sp
                 )
+
+                Image(
+                    painter = painterResource(id = R.drawable.forking_icon) ,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(30.dp)
+                )
+
+
+
             }
 
 
