@@ -1,4 +1,3 @@
-# My Project
 
 ## Screenshots
 
@@ -9,5 +8,5 @@
 
 ### Final Result
 <p align="center">
-  <img src="./Final_Result.jpeg" alt="Final Result" width="400"/>
+  <img src="./Issues_Screen.jpg" alt="Final Result" width="400"/>
 </p>
