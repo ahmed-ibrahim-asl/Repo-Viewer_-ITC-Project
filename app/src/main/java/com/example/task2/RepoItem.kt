@@ -1,4 +1,4 @@
-package com.example.task2.RepoItem
+package com.example.task2
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -21,7 +21,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.task2.R
 
 @Composable
 fun RepoItem(modifier: Modifier = Modifier) {

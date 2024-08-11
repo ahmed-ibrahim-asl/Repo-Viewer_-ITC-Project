@@ -3,6 +3,7 @@ package com.example.task2.Details_Screen
 import android.media.tv.TvContract.Channels.Logo
 import android.os.Build
 import androidx.annotation.RequiresApi
+import androidx.annotation.StringRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -11,9 +12,12 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.Divider
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -29,53 +33,15 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.task2.R
+import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.ui.res.stringResource
+import com.example.task2.CommonUi.Circle
+import com.example.task2.CommonUi.CustomTopAppBar
 
 
-@Composable
-fun Circle(color: Color, size: Dp) {
-    Box(
-        modifier = Modifier
-            .size(size) // Set the size of the circle
-            .background(color = color, shape = CircleShape) // Set the color and shape to circle
-    )
-}
 
-@RequiresApi(Build.VERSION_CODES.Q)
-@Composable
-fun TopAppBar(modifier: Modifier = Modifier) {
-
-    Box(
-        modifier = Modifier
-            .height(70.dp)
-            .fillMaxWidth()
-            .background(Color.White),
-        contentAlignment = Alignment.Center
-    ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(56.dp),
-
-            horizontalArrangement = Arrangement.Start,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Icon(
-                imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-                contentDescription = null,
-                modifier = Modifier
-                    .padding(start = 16.dp)
-                    .clickable {}
-            )
-        }
-        Text(
-            text = "Details",
-            fontSize = 25.sp,
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier.align(Alignment.Center)
-        )
-    }
-
-}
 
 
 @RequiresApi(Build.VERSION_CODES.Q)
@@ -87,7 +53,18 @@ fun MainScreenView(modifier: Modifier = Modifier) {
             .fillMaxWidth()
             .background(Color.LightGray)
     ) {
-        TopAppBar()
+
+
+        CustomTopAppBar(
+            titleRes = R.string.detailsTitle,
+            modifier = Modifier.fillMaxWidth(),
+            showBackButton = true ,
+            onBackButtonClicked = {},
+            color = Color.White
+        )
+
+
+
         HorizontalDivider(thickness = 1.dp, color = Color.Gray)
 
         Column(
@@ -207,6 +184,9 @@ fun MainScreenView(modifier: Modifier = Modifier) {
     }
 
 }
+
+
+
 
 
 
