@@ -139,7 +139,7 @@ fun NetworkErrorScreen(modifier: Modifier = Modifier) {
             ) {
 
                 OutlinedButton(
-                    onClick = { /*TODO*/ },
+                    onClick = {  },
                     border = BorderStroke(2.dp, Color(0xFF4CAF50)),
                     shape = RoundedCornerShape(6.dp),
 
