@@ -2,5 +2,8 @@
     <string name="app_name">Task2</string>
     <string name="detailsTitle">Details</string>
     <string name="IssuesScreenTitle">Issues</string>
+    <string name="Network_Error_Screen">Github Repositories</string>
+    <string name="NetworkErrorMessage">Something Went Wrong..</string>
+
 
 </resources>
